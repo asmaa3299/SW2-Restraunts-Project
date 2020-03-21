@@ -8,14 +8,19 @@ nav{
     box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.3);
     height: 80px;
 }
-.navbar-brand{
+.navbar-brand , .navbar-brand:hover{
     color: black;
 }
+
 nav a{
     color:#FBBF88;
     transition: all ease-in-out .5s;
 }
-nav a:hover{
+.dropdown-toggle:hover{
+    color: rgb(255, 115, 0);
+    list-style: none;
+}
+nav .nav-link:hover{
     color: rgb(255, 115, 0);
     border-bottom: solid 1px rgb(255, 115, 0);
     transform: scale(1.1);
@@ -40,7 +45,7 @@ nav a:hover{
         margin-left: 0;
     }
   }
-.header-content button{
+.header-content button , .header-content-user button{
     background-color: rgb(255, 115, 0);
     color: white;
     height: 60px;
@@ -49,7 +54,10 @@ nav a:hover{
     margin-top: 20px;
     transition: all ease-in-out .3s;
 }
-.header-content button:hover{
+.header-content a , .header-content a:hover{
+    color:white;
+}
+.header-content button:hover , .header-content-user button:hover{
     color: white;
     transform: scale(1.1);
 }
@@ -57,6 +65,11 @@ nav a:hover{
     font-size: 20px;
     background-color: white;
     color: rgb(255, 115, 0);
+}
+.header-content h2{
+    background-color: white;
+    color: rgb(255, 115, 0);
+    padding: 10px;
 }
 
 /* our story section */
@@ -99,6 +112,7 @@ nav a:hover{
 }
 .card{
     margin-top: 50px;
+    margin-bottom: 80px;
     background-color: #FBBF88;
     box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.1);
 }
@@ -125,7 +139,6 @@ nav a:hover{
 }
 
 .footer{
-    margin-top: 80px;
     padding: 20px;
 	background-color: #1E1C1F;
 }
@@ -145,3 +158,51 @@ nav a:hover{
       color: #FBBF88;
       text-align: center;
   }
+/* User and Admin Home Page */
+.header-user{
+    background: url("../img/empty-dining-tables-and-chairs-1579739.jpg") bottom fixed;
+    background-size: cover;
+    height: 500px;
+    opacity: .9;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header-content-user{
+    position: absolute;    	
+    margin-top: 200px;
+    margin-left: 300px;
+    text-align: center;
+}
+.header-content-user h2{
+    background-color: white;
+    color: rgb(255, 115, 0);
+    padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .header-content-user{
+        margin-left: 0;
+    }
+  }
+.gallery{
+    text-align: center;
+}
+
+/* login and register pages */
+.log-in{
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+.register{
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+.form-btn , .form-btn:hover{
+    background-color: rgb(255, 115, 0);
+    color: white;
+    padding: 5px;
+    
+}
+.btn-link , .btn-link:hover{
+    color: #FBBF88;
+}

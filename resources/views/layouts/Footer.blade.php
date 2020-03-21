@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" id="contact">
     <div class="row justify-content-center">
         <div class="col-1">
           <a href="#"><i class='fab fa-facebook-f font-awesome'></i></a>

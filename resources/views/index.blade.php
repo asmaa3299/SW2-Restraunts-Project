@@ -15,7 +15,7 @@
                 <div class="row header-content justify-content-center">
                     <p class="col-9"><i class="fas fa-location-arrow"></i> Nozha 11 Mahmod Street in front of Shams Sporting Club
                         Cairo.<br><strong>Open everyday, 10:00 AM - 11:00 PM</strong></p>
-                    <button class="col-4 btn">Reserve Now</button>
+                    <button class="col-4 btn"><a href="{{url('/reservation')}}">Reserve Now</a></button>
                 </div> 
             </div>
         </section>
@@ -49,7 +49,7 @@
     <!-- Slideshow Section -->
         <section row>
             <div class="col-12 container">
-                <div class="row justify-content-center slideshow">
+                <div class="row justify-content-center slideshow" id="slideshow">
                     <div class="col-12 col-md-6">
                         <h2 style="text-align: center;color: rgb(255, 115, 0); margin: 10px 0 10px 0 ">
                             Why our clients choose us?!
