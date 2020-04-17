@@ -206,3 +206,7 @@ nav .nav-link:hover{
 .btn-link , .btn-link:hover{
     color: #FBBF88;
 }
+
+.view-details:hover{
+    text-decoration: none;
+}

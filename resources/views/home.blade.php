@@ -8,7 +8,9 @@
         <div class="row header-content-user justify-content-center">
             <h2 class="col-10">Welcome {{ auth()->user()->name }}</h2>
             <button class="col-4 btn">Reserve Now</button>
-            <button class="col-4 btn ml-5">View Details</button>
+            <a href="/user-details" style="display: contents;" class="view-details">
+                <button class="col-4 btn ml-5">View Details</button>
+            </a>
         </div> 
     </div>
     <div class="row justify-content-around gallery">
