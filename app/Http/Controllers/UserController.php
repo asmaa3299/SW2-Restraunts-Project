@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\User;
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //user function to make the authorized user show his profile details 
     public function viewDetails(){
         $user = auth()->user();
@@ -32,4 +36,5 @@ class UserController extends Controller
         $user->save();
         return redirect('/user/showProfile.blade.php')->with('status','Your Account is Updated');
     }
+    
 }

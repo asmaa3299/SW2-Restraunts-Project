@@ -8,7 +8,7 @@
     <div class="col-12 header-user">
         <div class="row header-content-user justify-content-center">
             <h2 class="col-10">Welcome {{ auth()->user()->FirstName }} {{ auth()->user()->LastName }}</h2>
-            <button class="col-4 btn">Reserve Now</button>
+            <button class="col-4 btn"><a href="{{url('/Reservation/makeReservation')}}">Reserve Now</a></button>
         <button class="col-4 btn ml-5"><a href="#">View Details</a></button>
         </div> 
     </div>
