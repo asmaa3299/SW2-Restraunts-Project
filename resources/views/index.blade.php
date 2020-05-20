@@ -16,7 +16,7 @@
                 <div class="row header-content justify-content-center">
                     <p class="col-9"><i class="fas fa-location-arrow"></i> Nozha 11 Mahmod Street in front of Shams Sporting Club
                         Cairo.<br><strong>Open everyday, 10:00 AM - 11:00 PM</strong></p>
-                    <button class="col-4 btn"><a href="{{url('/reservation')}}">Reserve Now</a></button>
+                    <button class="col-4 btn"><a href="{{url('/Reservation/makeReservation')}}">Reserve Now</a></button>
                 </div> 
             </div>
         </section>
