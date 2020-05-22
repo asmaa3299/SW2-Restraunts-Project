@@ -26,13 +26,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-<<<<<<< HEAD
-=======
 
     
     public function reservations(){
         return $this->hasMany("App\Reservation");
       
     }
->>>>>>> Make-Reservation-Method---Asmaa-Mahmoud
 }

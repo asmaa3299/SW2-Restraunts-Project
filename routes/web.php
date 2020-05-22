@@ -15,19 +15,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-//for redirect to reservation page but wait for it until the next sprint
-Route::get('/reservation', function () {
-    return view('reservation');
-});
-
 //for login and registration 
 Auth::routes();
 
 //for redirect to admin/user homepage 
 Route::get('/home', 'HomeController@index');
 
-<<<<<<< HEAD
-=======
+
 Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');
 Route::post('/Reservation' , 'ReservationController@store');
->>>>>>> Make-Reservation-Method---Asmaa-Mahmoud

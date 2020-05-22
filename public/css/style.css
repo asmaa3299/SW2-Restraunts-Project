@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> Make-Reservation-Method---Asmaa-Mahmoud
 body{
     overflow-x: hidden;
 }
@@ -220,11 +217,7 @@ button a , button a:hover{
 }
 /*reservations*/
 .reservation{
-<<<<<<< HEAD
-    margin-top: 250px;
-    margin-bottom: 200px;
-    text-align: center;
-=======
+
     margin-top: 120px;
 }
 .reserve-header{
@@ -233,5 +226,5 @@ button a , button a:hover{
 .reserve{
     margin-top: 40px;
     margin-bottom: 20px;
->>>>>>> Make-Reservation-Method---Asmaa-Mahmoud
+
 }
