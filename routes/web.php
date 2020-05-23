@@ -20,6 +20,7 @@ Auth::routes();
 
 //for redirect to admin/user homepage 
 Route::get('/home', 'HomeController@index');
+Route::get('/Reservation/viewReservation' , 'ReservationController@viewReservation');
 
 
 Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');

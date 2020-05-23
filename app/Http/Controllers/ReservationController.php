@@ -87,6 +87,12 @@ class ReservationController extends Controller
     }
             
     }
+
+      //View Reservation Phase2
+      public function viewReservation(){
+        $reserv = Reservation::all();
+        return view('/Reservation/viewReservation', compact('reserv'));
+    }
     
 }
 
