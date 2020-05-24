@@ -40,7 +40,7 @@
                 <td>{{ $re->date }}</td>
                 <td>{{ $re->starttime }}</td>
                 <td>{{ $re->endtime }}</td>
-                <td><a href = '#'>Delete</a></td> 
+                <td><a href = "{{url('/Reservation/delete/'.$re->id)}}">Delete</a></td> 
                 </tr>
                 @endforeach
       </tbody>
