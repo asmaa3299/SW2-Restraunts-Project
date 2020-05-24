@@ -94,5 +94,13 @@ class ReservationController extends Controller
         return view('/Reservation/viewReservation', compact('reserv'));
     }
     
+    
+    public function destroy($id)
+    {
+        $row = Reservation::where('id', $id);
+        $row->delete();
+        return back();
+    }
+    
 }
 
