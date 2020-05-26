@@ -10,5 +10,10 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
+    
+    public function viewDetails()
+    {
+        return view('user_details');
+    }
 
 }
