@@ -9,7 +9,7 @@ class UserController extends Controller
     //user function to make the authorized user show his profile details 
     public function viewDetails(){
         $user = auth()->user();
-        return view('user.showProfile' , compact('user'));
+        return view('user_details' , compact('user'));
     }
 
     //user function to make the authorized user access edit profile page 
