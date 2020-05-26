@@ -11,7 +11,7 @@
                 data-toggle="modal">
                 <th title="ID"
                     style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important">
-                    ID
+                    #
                 </th>
                 <th title="Name"
                     style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
@@ -21,6 +21,10 @@
                     style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 15% !important;">
                     Email
                 </th>
+                <th title="Email"
+                    style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 15% !important;">
+                    Phone
+                </th>
                 <th title="Created At"
                     style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
                     Created At
@@ -29,29 +33,36 @@
             </thead>
 
             <tbody>
-            <tr class="flex-wrap d-flex justify-content-between"
-                data-toggle="modal" style="background-color: rgb(255, 152, 67);color: #FFF;">
-                <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
-                    <p>
-                        {{ auth()->id() }}
-                    </p>
-                </td>
-                <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
-                    <p >
-                       {{ auth()->user()->name }}
-                    </p>
-                </td>
-                <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
-                    <p>
-                        {{ auth()->user()->email }}
-                    </p>
-                </td>
-                <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
-                    <p>
-                        {{ auth()->user()->created_at->toDateTimeString() }}
-                    </p>
-                </td>
-            </tr>
+            @foreach($users as $index=>$user)
+                <tr class="flex-wrap d-flex justify-content-between"
+                    data-toggle="modal" style="background-color: rgb(255, 152, 67);color: #FFF;">
+                    <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
+                        <p>
+                            {{ $index+1 }}
+                        </p>
+                    </td>
+                    <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
+                        <p >
+                           {{ $user->FirstName." ".$user->LastName }}
+                        </p>
+                    </td>
+                    <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
+                        <p>
+                            {{ $user->email }}
+                        </p>
+                    </td>
+                    <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
+                        <p>
+                            {{ $user->phone }}
+                        </p>
+                    </td>
+                    <td style="display:block;text-overflow: ellipsis;overflow: hidden; white-space: nowrap;width: 20% !important;">
+                        <p>
+                            {{ $user->created_at->toDateTimeString() }}
+                        </p>
+                    </td>
+                </tr>
+             @endforeach
             </tbody>
 
         </table>

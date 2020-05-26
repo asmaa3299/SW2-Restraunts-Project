@@ -13,7 +13,8 @@ class UserController extends Controller
     
     public function viewDetails()
     {
-        return view('user_details');
+        $users=User::all();
+        return view('user_details',compact('users'));
     }
 
 }
