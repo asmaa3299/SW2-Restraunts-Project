@@ -40,7 +40,16 @@
                 <td>{{ $re->date }}</td>
                 <td>{{ $re->starttime }}</td>
                 <td>{{ $re->endtime }}</td>
-                <td><a href = "{{url('/Reservation/delete/'.$re->id)}}">Delete</a></td> 
+                <td>
+                    <form action="{{url('/Reservation/delete/'.$re->id)}}" method="post" style="display: inline-block;">
+                        {{csrf_field()}}
+                        {{method_field('delete')}}
+
+                        <button type="submit" class="btn btn-danger delete btn-sm">Delete</button>
+
+                    </form>
+
+                </td>
                 </tr>
                 @endforeach
       </tbody>

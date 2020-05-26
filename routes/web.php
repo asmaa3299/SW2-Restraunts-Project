@@ -29,4 +29,4 @@ Route::delete('/Reservation/delete/{id}' , 'ReservationController@destroy');
 
 
 //==== Route Show User Details
-Route::get('Reservation/delete/' , 'UserController@viewDetails');
+Route::get('/user/details' , 'UserController@viewDetails');

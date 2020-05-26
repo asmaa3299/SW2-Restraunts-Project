@@ -24,6 +24,9 @@
         <li class="nav-item item">
             <a href="{{url('/user/details')}}" class="nav-link">view user</a>
         </li>
+        <li class="nav-item item">
+            <a href="{{url('/Reservation/viewReservation')}}" class="nav-link">view reservations</a>
+        </li>
     </ul>
   
     <!-- Right Side Of Navbar -->
