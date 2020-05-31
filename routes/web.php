@@ -24,9 +24,9 @@ Route::get('/Reservation/viewReservation' , 'ReservationController@viewReservati
 
 
 Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');
+
 Route::post('/Reservation' , 'ReservationController@store');
+
+Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
+
 Route::delete('/Reservation/delete/{id}' , 'ReservationController@destroy');
-
-
-//==== Route Show User Details
-Route::get('/user/details' , 'UserController@viewDetails');

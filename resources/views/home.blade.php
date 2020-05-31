@@ -51,9 +51,9 @@
     <div class="col-12 header">
         <div class="row header-content justify-content-center">
             <h2 class="col-8">Welcome Admin {{ auth()->user()->FirstName  }} {{ auth()->user()->LastName }}</h2>
-            <button class="col-5 btn"><a href="#">View Registration</a></button>
-            <button class="col-5 ml-5 btn"><a href="{{url('/Reservation/viewReservation')}}">View Reservations</a><button>
-            </div> 
+            <button class="col-5 btn"> <a href="{{url('/registration/getInfo')}}"> view Registration </a> </button>
+            <button class="col-5 ml-5 btn"><a href="{{url('/Reservation/viewReservation')}}">View Reservations</a></button>
+        </div> 
     </div>
 </section>
 @endif    
