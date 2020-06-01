@@ -21,7 +21,12 @@ class adminController extends Controller
         $users = DB::table('users')->get();
         return view('/registration/getInfo', compact('users'));
         
-        
-    
     }
+
+    public function Delete($id){
+        DB::delete('delete from users where id = ?',[$id]);
+        echo "Record Deleted successfully.";
+    }
+
+
 }

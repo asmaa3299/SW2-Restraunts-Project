@@ -31,7 +31,7 @@
                                     <td>
                                         <a href="#" ><button  style="background-color:  rgb(255, 115, 0); border: none;" type="button" class="btn btn-primary"> Update </button></a>
                                             &nbsp;
-                                        <a href="#" ><button  style="background-color:  rgb(255, 115, 0); border: none;"  type = "button" class = "btn btn-primary"> Delete </button></a>
+                                        <a href='delete/{{ $user->id }}' ><button  style="background-color:  rgb(255, 115, 0); border: none;"  type = "button" class = "btn btn-primary"> Delete </button></a>
                                     </td>
                                         
                                 </tr>
