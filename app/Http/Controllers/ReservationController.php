@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Reservation;
 use App\Table;
+use Auth;
 use DB;
 class ReservationController extends Controller
 {
@@ -94,13 +95,28 @@ class ReservationController extends Controller
         return view('/Reservation/viewReservation', compact('reserv'));
     }
     
-    
+    // public function viewTicket($id)
+    // {
+    //     $reservations = Reservation::with($id)
+    //     ->orderBy('date', 'asc')
+    //     ->get();
+
+    //   return view('/Reservation/ViewTicket',compact('reserv'))->with('reservations', $reservations);
+    // }
+    public function viewTicket(Reservation $reserve)
+{
+        $userId = Auth::user()->id;
+        $reserve = Reservation::where('user_id',$userId)->get();
+        return view('/Reservation/ViewTicket', compact('reserve'));
+}
+
     public function destroy($id)
     {
         $row = Reservation::find($id);
         $row->delete();
         return back();
     }
+
     
 }
 
