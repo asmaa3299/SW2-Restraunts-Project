@@ -20,14 +20,20 @@ Auth::routes();
 
 //for redirect to admin/user homepage 
 Route::get('/home', 'HomeController@index');
-Route::get('/Reservation/viewReservation' , 'ReservationController@viewReservation');
-
-Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');
-
-Route::post('/Reservation' , 'ReservationController@store');
 
 //Register
 Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
 Route::get('/registration/getInfo/{id}','adminController@Delete');
 
+//Reservation
+Route::get('/Reservation/viewReservation' , 'ReservationController@viewReservation');
+Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');
 Route::delete('/Reservation/delete/{id}' , 'ReservationController@destroy');
+Route::post('/Reservation' , 'ReservationController@store');
+
+//Reservation/ticket
+Route::get('/Reservation/ViewTicket','ReservationController@viewTicket');
+
+//registration
+Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
+Route::get('/registration/getInfo/{id}','adminController@Delete');

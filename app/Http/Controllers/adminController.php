@@ -23,7 +23,9 @@ class adminController extends Controller
         
     }
 
-    public function Delete($id){
+    public function Delete($id)
+    {
+
         DB::delete('delete from users where id = ?',[$id]);
         echo "Record Deleted successfully.";
     }
