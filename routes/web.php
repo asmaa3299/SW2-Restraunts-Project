@@ -22,11 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::get('/Reservation/viewReservation' , 'ReservationController@viewReservation');
 
-
 Route::get('/Reservation/makeReservation' , 'ReservationController@makeReservation');
 
 Route::post('/Reservation' , 'ReservationController@store');
 
+//Register
 Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
+Route::get('/registration/getInfo/{id}','adminController@Delete');
 
 Route::delete('/Reservation/delete/{id}' , 'ReservationController@destroy');
