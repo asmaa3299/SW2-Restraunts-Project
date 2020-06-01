@@ -13,8 +13,9 @@ class UserController extends Controller
     
     public function viewDetails()
     {
-        $users=User::all();
-        return view('user_details',compact('users'));
+        //$userId = auth()->user()->id
+        $user = User::Find(auth()->user()->id);
+        return view('user_details',compact('user'));
     }
 
 }

@@ -27,7 +27,7 @@ class adminController extends Controller
     {
 
         DB::delete('delete from users where id = ?',[$id]);
-        echo "Record Deleted successfully.";
+        return redirect('/registration/getInfo')->with('status','User deleted successfully');
     }
 
 

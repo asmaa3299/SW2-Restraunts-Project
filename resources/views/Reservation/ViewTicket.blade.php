@@ -10,32 +10,31 @@
                     <table class="table table-hover">
                         <thead  class="thead-dark">
                             <tr>
-                                <th scope="col">Table ID</th>
                                 <th scope="col">Number of Guests</th>
                                 <th scope="col">Table View</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Reservation start time</th>
                                 <th scope="col">Reservation end time</th>
+                                <th scope="col">Ticket Print</th>
                             </tr>
                         </thead>
                         <tbody  >
                             @foreach ($reserve as $rev)
                                 <tr>
-                                    <td>{{ $rev->table_id }}</td>
                                     <td>{{ $rev->guests }}</td>
+                                    <td>{{ $rev->view }}</td>
                                     <td>{{ $rev->date  }}</td>
                                     <td>{{ $rev->starttime }}</td>
                                     <td>{{ $rev->endtime }}</td>
                                         
                                     <td>
-                                        
                                         <a href="#" ><button  style="background-color:  rgb(255, 115, 0); border: none;"  type = "button" class = "btn btn-primary"> Print Ticket</button></a>
                                     </td>
                                         
                                 </tr>
                             @endforeach
                         </tbody>
-                     </table> </ul>
+                     </table> 
             
                 </div>
             </div>
