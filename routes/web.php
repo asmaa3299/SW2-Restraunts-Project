@@ -37,3 +37,4 @@ Route::get('/Reservation/ViewTicket','ReservationController@viewTicket');
 //registration
 Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
 Route::get('/registration/getInfo/{id}','adminController@Delete');
+Route::get('/user/details','UserController@viewDetails');
