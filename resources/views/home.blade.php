@@ -9,8 +9,8 @@
         <div class="row header-content-user justify-content-center">
             <h2 class="col-10">Welcome {{ auth()->user()->FirstName }} {{ auth()->user()->LastName }}</h2>
             <button class="col-4 btn"><a href="{{url('/Reservation/makeReservation')}}">Reserve Now</a></button>
-            <button class="col-4 btn ml-5"><a href="#">View Details</a></button>
-            <button class="col-4 btn "><a href="{{url('/Reservation/ViewTicket')}}">View Reservation</a></button>
+            <button class="col-4 btn ml-5"><a href="{{url('/user_details')}}">View Details</a></button>
+            <button class="col-4 btn "><a href="{{url('/Reservation/ViewTicket')}}">View Reservation Ticket</a></button>
             
         </div> 
     </div>
@@ -53,7 +53,7 @@
     <div class="col-12 header">
         <div class="row header-content justify-content-center">
             <h2 class="col-8">Welcome Admin {{ auth()->user()->FirstName  }} {{ auth()->user()->LastName }}</h2>
-            <button class="col-5 btn"> <a href="{{url('/registration/getInfo')}}"> view Registration </a> </button>
+            <button class="col-5 btn"> <a href="{{url('/registration/getInfo')}}"> View Registration </a> </button>
             <button class="col-5 ml-5 btn"><a href="{{url('/Reservation/viewReservation')}}">View Reservations</a></button>
         </div> 
     </div>
