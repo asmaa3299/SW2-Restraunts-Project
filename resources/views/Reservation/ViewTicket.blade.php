@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-
 @section('content')
     <div class="container">
         <h1 style="  margin-top:100px; color: rgb(255, 115, 0); text-align: center;"> Reservation Tickets </h1>
@@ -10,6 +9,7 @@
                     <table class="table table-hover">
                         <thead  class="thead-dark">
                             <tr>
+                                <th scope="col">Table Number</th>
                                 <th scope="col">Number of Guests</th>
                                 <th scope="col">Table View</th>
                                 <th scope="col">Date</th>
@@ -21,6 +21,7 @@
                         <tbody  >
                             @foreach ($reserve as $rev)
                                 <tr>
+                                    <td>{{ $rev->table_id }}</td>
                                     <td>{{ $rev->guests }}</td>
                                     <td>{{ $rev->view }}</td>
                                     <td>{{ $rev->date  }}</td>
@@ -28,7 +29,15 @@
                                     <td>{{ $rev->endtime }}</td>
                                         
                                     <td>
-                                        <a href="#" ><button  style="background-color:  rgb(255, 115, 0); border: none;"  type = "button" class = "btn btn-primary"> Print Ticket</button></a>
+                            
+                                        <form action="{{'/Reservation/PrintTicket/'.$rev->table_id}}" method="get"  style="display: inline-block;">
+                                            {{csrf_field()}}
+                                            
+                    
+                                            <button  style="background-color:  rgb(255, 115, 0); border: none;"  type = "submit" class = "btn btn-primary">PrintTicket</button>
+                    
+                                        </form>
+                                    
                                     </td>
                                         
                                 </tr>

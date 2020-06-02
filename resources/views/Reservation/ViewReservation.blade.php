@@ -4,10 +4,6 @@
         The Reservations</h2>
     <div class="panel-group">
       <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-          </h4>
-        </div>
         <div id="collapse1" class="panel-collapse" style="margin-top:30px;overflow-y:scroll; height:400px;">
           <table class="table table-dark">
       <thead>

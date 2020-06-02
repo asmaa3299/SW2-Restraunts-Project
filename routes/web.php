@@ -33,6 +33,7 @@ Route::post('/Reservation' , 'ReservationController@store');
 
 //Reservation/ticket
 Route::get('/Reservation/ViewTicket','ReservationController@viewTicket');
+Route::get('/Reservation/PrintTicket/{table_id}','ReservationController@PrintTicket');
 
 //registration
 Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
