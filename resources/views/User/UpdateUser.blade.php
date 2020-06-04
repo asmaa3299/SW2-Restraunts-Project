@@ -2,9 +2,9 @@
 
 @section('content')
 
- <div class="row">
+ <div class="row" style="margin-top: 150px;">
      <div class="col-md-9 offset-md-2">
-         <h3>Edit our Account</h3>
+         <h3>Edit Your Account</h3>
          <hr>
         <form action="{{'/User/user_details'}}" method="POST">
             <input type="hidden" name="_method" value="PUT">
