@@ -40,4 +40,9 @@ Route::get('/registration/getInfo','adminController@getData')->name('UserInfo');
 Route::get('/registration/delete/{id}','adminController@Delete');
 
 //view user details
-Route::get('/user_details','UserController@viewDetails');
+Route::get('/User/user_details','UserController@viewDetails');
+
+// Update User Details
+
+Route::get('/User/UpdateUser', 'UserController@edit')->name('editprofile');
+Route::put('/User/user_details', 'UserController@update');

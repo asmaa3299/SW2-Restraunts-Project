@@ -10,8 +10,8 @@
                         <h5 class="card-text">Last Name: {{ $user->LastName  }} </h5>
                         <h5 class="card-text">Email: {{ $user->email }} </h5>
                         <h5 class="card-text"> Phone Number: {{ $user->phone }} </h5>
-                        <a href='#' ><button  class="btn" style="background-color:  rgb(255, 115, 0); border: none;"  type = "button"> Edit Details </button></a>
-
+                        <a href="{{ '/User/UpdateUser'}}" class="btn btn-primary float-left mr-2"> Edit</a>
+                    
                     </div>
                 </div>  
             </div>                        
