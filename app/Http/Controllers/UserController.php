@@ -15,7 +15,31 @@ class UserController extends Controller
     {
         //$userId = auth()->user()->id
         $user = User::Find(auth()->user()->id);
-        return view('user_details',compact('user'));
+        return view('/User/user_details',compact('user'));
+    }
+
+    // edit post form
+    public function edit()
+    {
+        $user = auth()->user();
+        return view('User.UpdateUser',compact('user'));
+    }
+
+    //user update profile
+    public function update(Request $request)
+    {
+        
+        $user = auth()->user();
+        $user->FirstName=$request->input( 'FirstName' );
+        $user->LastName=$request->input( 'LastName' );
+        $user->email=$request->input( 'email' );
+        $user->phone=$request->input( 'phone' );
+    
+       
+        $user->save();
+        
+
+        return redirect('/User/user_details');
     }
 
 }

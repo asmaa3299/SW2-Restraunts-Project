@@ -117,12 +117,7 @@ class ReservationController extends Controller
         $row->delete();
         return back();
     }
-    // public function PrintTicket($table_id)
-    // {
-
-    //     $reserve = Reservation::where('tableID',$table_id)->get();
-    //     return view('reservation/PrintTicket', compact('reserve'));
-    // }
+  
     public function PrintTicket($table_id)
     {
         $reserve=Reservation::find($table_id);

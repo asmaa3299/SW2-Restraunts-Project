@@ -9,7 +9,7 @@
         <div class="row header-content-user justify-content-center">
             <h2 class="col-10">Welcome {{ auth()->user()->FirstName }} {{ auth()->user()->LastName }}</h2>
             <button class="col-4 btn"><a href="{{url('/Reservation/makeReservation')}}">Reserve Now</a></button>
-            <button class="col-4 btn ml-5"><a href="{{url('/user_details')}}">View Details</a></button>
+            <button class="col-4 btn ml-5"><a href="{{url('/User/user_details')}}">View Details</a></button>
             <button class="col-4 btn "><a href="{{url('/Reservation/ViewTicket')}}">View Reservation Ticket</a></button>
             
         </div> 
